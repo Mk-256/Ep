@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title>Intellegent Hsptl</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	
+	<script>
+function validateForm() {
+  var x = document.forms["myForm"]["name"].value;
+  if (x == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+   var y = document.forms["myForm"]["password"].value;
+  if (y == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+}
+</script>
+
+<style>
+body {
+  background-image: url('1.jpg');
+   background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+
+</head>
+<body>
+ 
+<header>
+	<div class="menu">
+	 
+		<div class="brand-name">
+			<a href="index.html">
+				<h2>
+				<i class="fa fa-hospital"></i>&nbsp;
+				Ep Hospital</h2>
+			</a>
+		</div>
+		 
+         <nav>
+         	<ul>
+         		 
+         		 
+         		<li><a href="index.html">Register</a></li>
+         		<li><a href="login.html">Login</a></li>
+         		 
+         	</ul>
+         </nav>
+	 
+	</div>
+</header>
+ 
+<section>
+	<div class="w-80">
+     <div class="form-box">
+     	<h1>Login Page</h1>
+     	<hr>
+     	 <form name="myForm" action="Lservlet" onsubmit="return validateForm()" method="post">
+     		<label for="username"><b>Username :</b></label><br/>
+				<input type="text" name="username" id="username" required/>
+				<br/><br/>
+
+				<label for="password"><b>Password :</b></label>
+				<br/>
+				<input type="password" name="password" id="password" required />
+				<br/><br/>
+	 
+				<button  class="submit" type="submit" id="login-btn"> Login</a></button>
+				<button type="submit" id="login-btn"> <a href="index.html">Register New User</a></button>
+				<br/><br/>
+				<p>Forget Password ? <a href="fp.html">Click Here</a></p>
+     	</form>
+     </div>
+    </div>
+</section>
+ 
+<footer>
+	<div class="w-80">
+		<div class="footer-box">
+ 		<h2>Services</h2>
+ 		<a href="#">HEPATOLOGY</a>
+ 		<a href="#">MEDICAL DRESSAGE</a>
+ 		<a href="#">LABORATORY</a>
+ 	 
+ 	</div>
+ 	<div class="footer-box">
+ 		<h2>About Us</h2>
+ 		<a href="#">Company Overview</a>
+ 		<a href="#">Management</a>
+ 		<a href="#">Initiatives</a>
+ 
+ 	</div>
+ 	 
+	</div>
+</footer>
+</body>
+</html>

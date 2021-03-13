@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+ 
+	 
+	<title>Intelligent Hsptl</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script type="text/javascript">
+function validate_form()
+     {
+       var passw=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+       var phoneno = /^\d{10}$/;
+       var user= /^[0-9a-zA-Z-'_]+$/;
+       var fname= /^[a-zA-Z\s]+$/;
+       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       var pw=document.signupform.password.value;
+       var cpw=document.signupform.cpassword.value;
+       var mb=document.signupform.mobile.value;
+       var un=document.signupform.username.value;
+       var fn=document.signupform.fullname.value;
+       var email=document.signupform.email.value;
+       if(pw.match(passw)) 
+        { }
+	else
+	{ 
+	alert('Password....Must contain at least one number and one uppercase and lowercase letter, \n and at least 8 or more characters');
+	return false;
+	}
+       if(cpw.match(passw)) 
+        { }
+	else
+	{ 
+	alert('Wrong...! Password....Must contain at least one number and one uppercase and lowercase letter, \n and at least 8 or more characters');
+	return false;
+	}
+       
+       if(mb.match(phoneno))
+        {}
+       else
+        {
+        alert("Invalid Number ..!");
+        return false;
+        }
+		 
+        if(pw != cpw)
+           {
+             alert("Passwords doesn't matched (:");
+             return false;
+           }
+       if(un.match(user))
+        {}
+       else
+        {
+        alert("Invalid UserName ..!");
+        return false;
+        }
+        if(fn.match(fname))
+        {}
+       else
+        {
+        alert("Invalid Full name ..!");
+        return false;
+        }
+        if(mailformat.match(email))
+        {}
+       else
+        {
+        alert("Invalid Email ..!");
+        return false;
+        }
+}  
+</script>
+<style>
+body{
+  background-image: url('2.jpg');
+   background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  
+}
+</style>
+
+</head>
+<body>
+<header>
+	<div class="menu">
+	 
+		<div class="brand-name">
+			<a href="index.html">
+				<h2>
+				<i class="fa fa-hospital"></i>&nbsp;
+				Ep HOSPITAL.</h2>
+			</a>
+		</div>
+		   <nav>
+         	<ul>
+         		 
+         		 
+         		<li><a href="index.html">Register</a></li>
+         		<li><a href="login.html">Login</a></li>
+         		 
+         	</ul>
+         </nav>
+		 
+	</div>
+</header>
+ 
+<section>
+	<div class="w-80">
+     <div class="form-box">
+     	<h1>User Registration Page</h1>
+     	<hr>
+		<form name="signupform" action="Rservlet" method="post" onsubmit="return validate_form()">
+                <p>UserName</p>
+                <input type="text" name= "username" placeholder="Create Username" required/> <br/><br/>
+                <p>Full Name</p>
+				
+                <input type="text" name= "fullname" placeholder="Enter Full Name"  required/><br/><br/>
+                <p>Email</p>
+                <input type="email" name= "email" placeholder="Enter Email" required autofocus/><br/><br/>
+                <p>Mobile No</p>
+                <input type="text" name= "mobile" placeholder="Enter Mobile Number" required/><br/><br/>
+                <p>Password</p>
+                <input type="Password" name="password" placeholder="Create Password" required/><br/><br/>
+                <p>Confirm Password</p>
+                <input type="Password" name="cpassword" placeholder="Re-Enter Password" required/><br/><br/>
+                
+				<button class="submit"  type="submit" id="register-btn"> Submit</a></button><br>
+                
+                <a href="login.html">Already have an account ?</a>
+					 
+				
+            </form>
+		
+		
+		
+		
+     	  
+     </div>
+    </div>
+</section>
+ 
+<footer>
+	<div class="w-80">
+		<div class="footer-box">
+ 		<h2>Services</h2>
+ 		<a href="#">HEPATOLOGY</a>
+ 		<a href="#">MEDICAL DRESSAGE</a>
+ 		<a href="#">LABORATORY</a>
+ 	 
+ 	</div>
+ 	 
+ 	<div class="footer-box">
+ 		<h2>Facilities</h2>
+ 		<a href="#">HEPATOLOGY</a>
+ 		<a href="#">MEDICAL DRESSAGE</a>
+ 		<a href="#">LABORATORY</a>
+ 		 
+ 	</div>
+	</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script type="text/javascript">
+function validate_loginform()
+     {
+       var cpassw=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+       var repassw=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+       var cpw=document.loginform.cpass.value;
+       var repw=document.loginform.repass.value;
+       if(cpw.match(cpassw)) 
+        { }
+	else
+	{ 
+	alert('Wrong...! Password....Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+	return false;
+	} 
+       if(repw.match(repassw))
+        {}
+       else
+        {
+        alert("Invalid UserName ..!");
+        return false;
+        }
+         
+}
+</script>
+ 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title>Intellegent Hsptl</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	
+	<script>
+function validateForm() {
+  var x = document.forms["myForm"]["name"].value;
+  if (x == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+   var y = document.forms["myForm"]["password"].value;
+  if (y == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+}
+</script>
+
+<style>
+body {
+  background-image: url('3.jpg');
+   background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+
+</head>
+<body>
+ 
+<header>
+	<div class="menu">
+	 
+		<div class="brand-name">
+			<a href="index.html">
+				<h2>
+				<i class="fa fa-hospital"></i>&nbsp;
+				Ep Hospital</h2>
+			</a>
+		</div>
+		 
+         <nav>
+         	<ul>
+         		 
+         		<li><a href="register.html">Register</a></li>
+         		<li><a href="login.html">Login</a></li>
+         		 
+         	</ul>
+         </nav>
+	 
+	</div>
+</header>
+ 
+<section>
+	<div class="w-80">
+     <div class="form-box">
+     	<h1>Forgot Password??</h1>
+<h2>Its OK We r ALways With U</h2>
+     	<hr>
+     	 <form name="loginform" action="Fservlet" method="post" onsubmit="return validate_loginform()">
+ <p>Email</p>
+                <input type="email" name= "email" placeholder="Enter Email" required autofocus/><br/><br/>
+                
+                <p>Create new Password</p>
+                <input type="Password" name= "cpass" placeholder="Create New Password" required/>  <br/><br/>
+                 
+                <p>Re Enter password</p>
+                <input type="Password" name="repass" placeholder="Re-Enter password" required/><br/><br/>
+                
+                 <input class="submit" type="submit" name="submit" id="register-btn" value="Save"/><br>
+ 
+                <a href="login.html"> Go Back</a><br>
+                 
+
+            </form>
+     </div>
+    </div>
+</section>
+ 
+<footer>
+	<div class="w-80">
+		<div class="footer-box">
+ 		<h2>Services</h2>
+ 		<a href="#">HEPATOLOGY</a>
+ 		<a href="#">MEDICAL DRESSAGE</a>
+ 		<a href="#">LABORATORY</a>
+ 	 
+ 	</div>
+ 	<div class="footer-box">
+ 		<h2>About Us</h2>
+ 		<a href="#">Company Overview</a>
+ 		<a href="#">Management</a>
+ 		<a href="#">Initiatives</a>
+ 
+ 	</div>
+ 	 
+	</div>
+</footer>
+</body>
+</html>
